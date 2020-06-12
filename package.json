@@ -1,0 +1,14 @@
+{
+  "name": "serverless-bot",
+  "version": "1.0.0",
+  "description": "Make a serverless telegram bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "duckyb",
+  "license": "MIT",
+  "dependencies": {
+    "node-telegram-bot-api": "^0.50.0"
+  }
+}
