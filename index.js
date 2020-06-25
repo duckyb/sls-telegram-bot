@@ -4,7 +4,6 @@
  */
 
 const mode = process.argv.slice(2)[0] || 'prod' // 'dev' || 'prod'
-console.log({ mode })
 
 const TelegramBot = require("node-telegram-bot-api");
 const { configuration } = require('./config.js');
