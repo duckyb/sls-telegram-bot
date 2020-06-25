@@ -1,5 +1,5 @@
 const https = require('https');
-const { token, endpoint } = require('../config.js').configuration.PRODUCTION;
+const { token, endpoint } = require('../config.js').configuration.prod;
 https.get(`https://api.telegram.org/bot${token}/deleteWebhook?url=${endpoint}`, res => {
   let data = '';
   res.on('data', chunk => data += chunk);

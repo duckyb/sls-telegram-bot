@@ -1,21 +1,17 @@
-/**
- * Serverless bot on AWS Lambda
- * Webhook: https://api.telegram.org/bot<your-token>/setWebhook?url=<your-endpoint-url>
- */
-
 const mode = process.argv.slice(2)[0] || 'prod' // 'dev' || 'prod'
-
 const TelegramBot = require("node-telegram-bot-api");
 const { configuration } = require('./config.js');
 const config = configuration[mode]; // dynamically load config
 const bot = new TelegramBot(config.token, { polling: mode === 'dev' });
 
 /**
- * COMMON MESSAGE HANDLER
+ * MESSAGE HANDLER
  */
 handleMessage = message => {
+  // Your code here!
   if (message.text) {
-    bot.sendMessage(message.chat.id, `Message received! You said:\n${message.text}`) // Echo the message
+    // Echos the received message
+    bot.sendMessage(message.chat.id, `Message received! You said:\n"${message.text}"`);
   }
 }
 

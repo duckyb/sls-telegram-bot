@@ -1,12 +1,13 @@
 service: sls-telegram-bot
 # app and org for use with dashboard.serverless.com
-# app: sls-telegram-bot
-# org: duckyb
+# app: app-name
+# org: your-org
 
 provider:
   name: aws
   runtime: nodejs12.x
   stage: dev
+  # change your region here
   region: eu-west-1
 
 # Function that will receive the requests
