@@ -4,11 +4,18 @@
   "description": "Make a serverless telegram bot",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "nodemon index.js dev",
+    "publish": "serverless deploy",
+    "setHook": "node ./hooks/setWebhook",
+    "delHook": "node ./hooks/deleteWebhook"
   },
   "author": "duckyb",
   "license": "MIT",
   "dependencies": {
     "node-telegram-bot-api": "^0.50.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4",
+    "serverless": "^1.73.1"
   }
 }
