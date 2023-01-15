@@ -4,8 +4,9 @@
   "description": "Make a serverless telegram bot",
   "main": "index.js",
   "scripts": {
-    "test": "nodemon index.js dev",
-    "publish": "serverless deploy",
+    "dev": "nodemon index.js dev",
+    "debug": "nodemon index.js dev",
+    "deploy": "serverless deploy",
     "setHook": "node ./hooks/setWebhook",
     "delHook": "node ./hooks/deleteWebhook"
   },

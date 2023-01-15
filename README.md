@@ -8,7 +8,7 @@ Clone the repository, then run `npm install` and `sls config`, to install the de
 
 ## Commands
 
-- `npm test` Runs the bot in polling mode with the dev configuration.
-- `npm run publish` Publish the bot on AWS using serverless-cli and prod configuration.
+- `npm run dev` Runs the bot in polling mode with the dev configuration.
+- `npm run deploy` Publish the bot on AWS using serverless-cli and prod configuration.
 - `npm run setHook` Set the webHook using the prod configuration.
 - `npm run delHook` Delete the webHook using the prod configuration.
