@@ -12,10 +12,10 @@
   "author": "duckyb",
   "license": "MIT",
   "dependencies": {
-    "node-telegram-bot-api": "^0.50.0"
+    "node-telegram-bot-api": "^0.61.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.4",
-    "serverless": "^1.73.1"
+    "nodemon": "^2.0.20",
+    "serverless": "^3.26.0"
   }
 }
