@@ -1,21 +1,24 @@
 service: sls-telegram-bot
-# app and org for use with dashboard.serverless.com
-# app: app-name
-# org: your-org
+frameworkVersion: '3'
 
 provider:
-  name: aws
-  runtime: nodejs12.x
-  stage: dev
-  # change your region here
-  region: eu-west-1
+    name: aws
+    runtime: nodejs18.x
+    stage: prod
+    region: eu-west-1
 
-# Function that will receive the requests
 functions:
-  bot:
-    handler: index.handler
-    events:
-      - http:
-          path: /
-          method: post
-          cors: true
+    hook:
+        handler: bot.handler
+        events:
+            - http:
+                  path: /
+                  method: post
+                  cors: true
+
+package:
+    include:
+        - locales/**
+
+plugins:
+    - serverless-esbuild

@@ -1,22 +1,42 @@
 {
-  "name": "serverless-bot",
-  "version": "1.0.0",
-  "description": "Make a serverless telegram bot",
-  "main": "index.js",
-  "scripts": {
-    "dev": "nodemon index.js dev",
-    "debug": "nodemon index.js dev",
-    "deploy": "serverless deploy",
-    "setHook": "node ./hooks/setWebhook",
-    "delHook": "node ./hooks/deleteWebhook"
-  },
-  "author": "duckyb",
-  "license": "MIT",
-  "dependencies": {
-    "node-telegram-bot-api": "^0.61.0"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.20",
-    "serverless": "^3.26.0"
-  }
+    "name": "serverless-telegram-bot",
+    "version": "1.0.0",
+    "description": "Modern serverless Telegram bot template using Grammy and TypeScript",
+    "main": "bot.ts",
+    "scripts": {
+        "start": "nodemon --exec ts-node bot.ts development -w .",
+        "deploy": "sls deploy",
+        "setHook": "ts-node ./hooks/setWebhook",
+        "delHook": "ts-node ./hooks/deleteWebhook"
+    },
+    "author": "duckyb",
+    "license": "MIT",
+    "dependencies": {
+        "@grammyjs/i18n": "^1.0.2",
+        "@grammyjs/storage-free": "^2.4.2",
+        "grammy": "^1.21.1",
+        "lodash": "^4.17.21"
+    },
+    "devDependencies": {
+        "@types/lodash": "^4.17.0",
+        "@types/node": "^20.11.28",
+        "@typescript-eslint/eslint-plugin": "^7.1.0",
+        "@typescript-eslint/parser": "^7.1.0",
+        "esbuild": "^0.20.2",
+        "eslint": "^8.57.0",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-plugin-prettier": "^5.1.3",
+        "nodemon": "^3.1.9",
+        "prettier": "^3.2.5",
+        "serverless": "^3.38.0",
+        "serverless-esbuild": "^1.52.1",
+        "typescript": "^5.3.3"
+    },
+    "nodemonConfig": {
+        "watch": [
+            "."
+        ],
+        "ext": "ts, json, ftl",
+        "exec": "ts-node bot.ts"
+    }
 }
